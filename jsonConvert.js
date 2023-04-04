@@ -1,7 +1,5 @@
 function initialize() {
-    var status = "* Offline *";
     if (navigator.onLine) {
-        status = "* Online *";
         retrieveLevels();
     } else {
         const localStorage = window.localStorage;
@@ -12,8 +10,6 @@ function initialize() {
             }
         }
     }
-
-    document.getElementById("status").innerHTML = status;
 
     document.body.addEventListener(
         "online",
