@@ -58,6 +58,7 @@ function addRow(aLevel) {
 
     var levelCell = document.createElement("td");
     levelCell.setAttribute('data-label', "Level");
+    levelCell.setAttribute('style', "text-align:center;");
     levelCell.innerHTML = aLevel.level;
 
     var nameCell = document.createElement("td");
@@ -66,6 +67,7 @@ function addRow(aLevel) {
 
     var rpCell = document.createElement("td");
     rpCell.setAttribute('data-label', "RP");
+    rpCell..setAttribute('style', "text-align:center;");
     rpCell.innerHTML = aLevel.rpRequired;
 
     row.appendChild(levelCell);
