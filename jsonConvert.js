@@ -33,13 +33,13 @@ function retrieveLevels() {
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-            var levels = JSON.parse(xhr.response).levels;
-            displayLevels(levels);
+            var allLevels = JSON.parse(xhr.response).levels;
+            displayLevels(allLevels);
 
             // Store contact data to localstorage
             const localStorage = window.localStorage;
             if (localStorage) {
-                localStorage.setItem("levels", JSON.stringify(levels));
+                localStorage.setItem("levels", JSON.stringify(allLevels));
             }
         }
     };
@@ -53,8 +53,8 @@ function displayLevels(levels) {
 }
 
 function addRow(aLevel) {
-    var tcontent = document.getElementById("tcontent");
-    var row = tcontent.insertRow();
+    var levelTable = document.getElementById("levelTable");
+    var row = levelTable.createElement("tr");
 
     var levelCell = row.insertCell();
     levelCell.setAttribute('data-label', "Level");
