@@ -60,15 +60,15 @@ function addRow(aLevel) {
     var tcontent = document.getElementById("tcontent");
     var row = tcontent.insertRow();
 
+    var levelCell = row.insertCell();
+    levelCell.setAttribute('data-label', "Level");
+    levelCell.innerHTML = aLevel.level;
+
     var nameCell = row.insertCell();
     nameCell.setAttribute('data-label', "Name");
-    nameCell.innerHTML = aLevel.level;
+    nameCell.innerHTML = aLevel.name;
 
-    var addressCell = row.insertCell();
-    addressCell.setAttribute('data-label', "Address");
-    addressCell.innerHTML = aLevel.name;
-
-    var mobileCell = row.insertCell();
-    mobileCell.setAttribute('data-label', "Mobile");
-    mobileCell.innerHTML = aLevel.rpRequired;
+    var rpCell = row.insertCell();
+    rpCell.setAttribute('data-label', "RP Required");
+    rpCell.innerHTML = aLevel.rpRequired;
 }
