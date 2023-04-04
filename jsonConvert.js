@@ -54,17 +54,23 @@ function displayLevels(levels) {
 
 function addRow(aLevel) {
     var levelTable = document.getElementById("levelTable");
-    var row = levelTable.createElement("tr");
+    var row = document.createElement("tr");
 
-    var levelCell = row.insertCell();
+    var levelCell = document.createElement("td");
     levelCell.setAttribute('data-label', "Level");
     levelCell.innerHTML = aLevel.level;
 
-    var nameCell = row.insertCell();
+    var nameCell = document.createElement("td");
     nameCell.setAttribute('data-label', "Name");
     nameCell.innerHTML = aLevel.name;
 
-    var rpCell = row.insertCell();
+    var rpCell = document.createElement("td");
     rpCell.setAttribute('data-label', "RP");
     rpCell.innerHTML = aLevel.rpRequired;
+
+    row.appendChild(levelCell);
+    row.appendChild(nameCell);
+    row.appendChild(rpCell);
+
+    levelTable.appendChild(row);
 }
