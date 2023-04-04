@@ -4,9 +4,9 @@ function initialize() {
     } else {
         const localStorage = window.localStorage;
         if (localStorage) {
-            const levels = localStorage.getItem("levels");
-            if (levels) {
-                displayDetails(JSON.parse(levels));
+            const levelArray = localStorage.getItem("levels");
+            if (levelArray) {
+                displayDetails(JSON.parse(levelArray));
             }
         }
     }
