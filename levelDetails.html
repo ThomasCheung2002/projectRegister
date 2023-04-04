@@ -6,11 +6,26 @@
     <meta charset="utf-8">
     <title>Level</title>
     <link rel="stylesheet" href="">
+    <script src="jsonConvert.js"></script>
 </head>
 
-<body>
-    <script type="module" src="jsonConvert.js"></script>
+<body onload="initialize()">
+    <div id="status"></div>
+    <table>
+        <caption>Information
+            <div id="status"></div>
+        </caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody id="tcontent">
+        </tbody>
 
+    </table>
 </body>
 
 </html>
