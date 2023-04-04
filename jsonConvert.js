@@ -69,6 +69,6 @@ function addRow(aLevel) {
     nameCell.innerHTML = aLevel.name;
 
     var rpCell = row.insertCell();
-    rpCell.setAttribute('data-label', "RP Required");
+    rpCell.setAttribute('data-label', "RP");
     rpCell.innerHTML = aLevel.rpRequired;
 }
