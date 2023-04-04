@@ -38,7 +38,7 @@ function retrieveLevels() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             var levels = JSON.parse(xhr.response).levels;
-            displayContacts(levels);
+            displayLevels(levels);
 
             // Store contact data to localstorage
             const localStorage = window.localStorage;
