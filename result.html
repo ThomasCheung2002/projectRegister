@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Regislation Result</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="displayResult.js"></script>
+
+</head>
+
+<body onload="dataHandling()">
+    <h3>Your regislation is submitted.</h3>
+    <table id="projectInfoTable">
+        <tr>
+            <td width="175">Project Name:</td>
+            <td width="700" id="projectNameField"></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="subProjectNotice"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Project Type(s):</td>
+            <td id="projectTypesField"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Project Description:<br><span id="projectDescriptionField">&nbsp;</span></td>
+        </tr>
+    </table>
+    <br>
+    <table id="projectTeamTable1">
+        <tr>
+            <td width="175">Team ID:</td>
+            <td id="teamIDField" width="700"></td>
+        </tr>
+        <tr>
+            <td>Team Name:</td>
+            <td id="teamNameField"></td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Project Manager ID:</td>
+            <td id="projectManagerIDField"></td>
+        </tr>
+        <tr>
+            <td>Project Manager Name:</td>
+            <td id="projectManagerNameField"></td>
+        </tr>
+    </table>
+    <br>
+    <table id="projectTeamTable2" border="1">
+        <tr>
+            <td colspan="3">Team Member(s):&emsp;[There is(are) <span id="numberOfMembers">0</span> member(s) in the team.]</td>
+        </tr>
+        <tr>
+            <td width="75"><b>(#)</b></td>
+            <th width="200"><b>Team Member ID</b></th>
+            <th width="500">Team Member Name</th>
+        </tr>
+    </table>
+    <h5>NOTE: Project ID will be assigned on later stage.</h5>
+    <a href="projectRegister.html">Click ME to add another new project</a>
+
+    <p id="debugSpan"></p>
+</body>
+
+</html>
